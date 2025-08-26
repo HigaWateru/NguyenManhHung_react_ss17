@@ -1,0 +1,67 @@
+.container {
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+form input {
+    width: 85%;
+    height: 30px;
+    font-size: 16px;
+    padding: 4px;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+form input:focus {
+    outline: none;
+    border: 1px solid #1976d2;
+}
+form p {
+    color: red;
+    font-size: 13px;
+}
+form button {
+    padding: 4px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #1976d2;
+}
+form button:focus {
+    outline: none;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+li button {
+    margin-left: 20px;
+    padding: 0;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+li button:focus {
+    outline: none;
+}
+li input {
+    margin-right: 20px;
+}
