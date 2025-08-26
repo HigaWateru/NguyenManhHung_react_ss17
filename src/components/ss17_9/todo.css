@@ -65,3 +65,61 @@ li button:focus {
 li input {
     margin-right: 20px;
 }
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.modal-dialog {
+  background: white;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+}
+.modal-dialog button {
+    padding: 0;
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.modal-header button {
+    border: none;
+    background-color: transparent;
+    color: #333;
+}
+.modal-body {
+    padding: 10px 20px;
+}
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    gap: 10px;
+}
+.modal-footer button {
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+.btn-confirm {
+    background-color: #1976d2;
+    color: white;
+}
+.btn-cancel {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+}

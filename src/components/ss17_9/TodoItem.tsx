@@ -8,16 +8,18 @@ interface TodoItemProps {
     confirmDelete: (todo: Todo) => void
 }
 
-const TodoItem: React.FC<TodoItemProps> = ({ todo, index, toggleComplete }) => {
+const TodoItem: React.FC<TodoItemProps> = ({ todo, index, toggleComplete, confirmDelete }) => {
     return (
-        <li className="list-item">
+        <li className="list-item d-flex justify-content-between align-items-center">
             <div>
                 <input type="checkbox" checked={todo.completed} onChange={() => toggleComplete(index)} className="me-2" />
-                <span style={{ textDecoration: todo.completed ? "line-through" : "" }}>{todo.text}</span>
+                <span style={{ textDecoration: todo.completed ? "line-through" : "" }}>
+                    {todo.text}
+                </span>
             </div>
             <div>
-                <button>✏️</button>
-                <button>🗑️</button>
+                <button className="btn btn-sm btn-warning me-2">✏️</button>
+                <button className="btn btn-sm btn-danger" onClick={() => confirmDelete(todo)}>🗑️</button>
             </div>
         </li>
     )
